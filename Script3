@@ -1,0 +1,22 @@
+let chosenNumber;
+let parsedChosenNumber;
+
+do {
+  chosenNumber = prompt("Elige un número");
+  if (isNaN(chosenNumber)) {
+    alert("Dije número..");
+  }
+} while (isNaN(chosenNumber));
+
+if (!chosenNumber && chosenNumber !== 0) {
+  alert("No estás obligado a hacerlo...");
+} else {
+  parsedChosenNumber = +chosenNumber;
+  if (parsedChosenNumber === 0) {
+    alert("El número ingresado es 0");
+  } else if (parsedChosenNumber > 0) {
+    alert("El número ingresado es POSITIVO");
+  } else {
+    alert("El número ingresado es NEGATIVO");
+  }
+}
