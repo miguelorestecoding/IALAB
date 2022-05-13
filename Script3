@@ -20,3 +20,95 @@ if (!chosenNumber && chosenNumber !== 0) {
     alert("El número ingresado es NEGATIVO");
   }
 }
+
+
+/*
+2) Crear un programa que pida un numero al usuario y le devuelva
+un mensaje diciendo si el numero es primo o no.
+Aclaración: Los números primos son aquellos que tienen exactamente 4 divisores enteros.
+*/
+
+// MI SOLUCION
+
+// const isPrime = (number) => {
+//   const parsedNumber = +number;
+//   if (number === null) {
+//     alert("Has Cancelado.");
+//     return;
+//   }
+//   //Agregado MOC: arregla salida cancel.
+//   if (!parsedNumber && parsedNumber !== 0) {
+//     alert("El dato ingresado no es un número");
+//     return;
+//   }
+
+//   if (parsedNumber < 2) {
+//     return false;
+//   }
+//   for (i = 2; i < parsedNumber; i++) {
+//     if (parsedNumber % i === 0) return false;
+//     // todo número es divisible por si mismo y por 1.
+//     // si aparte es divisible por otro (lo que se busca en el bucle for)
+//     // entonces ya no es primo
+//     //(si es divisible por otro da resto 0 y por lo tanto devuelve falso)
+//     //for busca entre 2 y uno menos que el número, si da resto cero devuelve falso
+//   }
+//   return true;
+// };
+
+// const chosenNumber = prompt("Elige un número");
+// // ejecuto la función diretamente en el if, no es necesario asignarla a una variable.
+// if (isPrime(chosenNumber) !== undefined) {
+//   if (isPrime(chosenNumber)) {
+//     alert("El número ES PRIMO");
+//   } else {
+//     alert("El número NO ES PRIMO");
+//   }
+// }
+
+//RESPUESTA CON FUNCION DEL VIDEO
+
+// const isPrime = (number) => {
+//   const parsedNumber = +number;
+//   if (!parsedNumber && parsedNumber !== 0) {
+//     alert("El valor ingresado no es un número");
+//     return;
+//   }
+//   if (parsedNumber < 2) return false;
+//   for (let i = 2; i < parsedNumber; i++) {
+//     if (parsedNumber % i === 0) return false;
+//   }
+//   return true;
+// };
+
+// const chosenNumber = prompt("Ingresa un número");
+// const isNumberPrime = isPrime(chosenNumber);
+
+// if (isNumberPrime !== undefined) {
+//   if (isNumberPrime) {
+//     alert("El numero ES PRIMO");
+//   } else {
+//     alert("El número NO ES PRIMO");
+//   }
+// }
+
+
+/*
+3) Crear un programa que convierta la termperatura de grados Celsius a 
+Faranheit y viceversa. El usuario deberia ingresar la temperatura y a que
+unidad la quiere convertir.
+*/
+//C a F (C x 9/5) + 32
+// F a C (F -32) x 5/9
+
+const convertTemperature = (temperature, target) => {
+  const parsedTemp = +temperature;
+  const parsedTarget = target.toLowerCase()
+  if (!parsedTemp && parsedTemp !== 0) {
+    /*se agrega distinto de cero porque 
+    0 es un dato válido pero hay que axlcuirlo del falsy*/
+    alert("El Valor Ingresado no es Valido.");
+    return;
+  }
+if (parsedTarget = "Celsius") {} else if (parsedTarget = "Farenheit") {} else {}
+};
